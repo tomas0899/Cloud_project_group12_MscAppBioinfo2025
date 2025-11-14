@@ -28,8 +28,7 @@ conda install pysam=0.11.2.2
 ##bash
 
 # --- 3. Download SDRF file ( Ribo-Seq and RNA-Seq sequencing data from ArrayExpress database at EMBL-EBI accession number E-MTAB-6938)---
-wget https://ftp.ebi.ac.uk/biostudies/fire/E-MTAB-938/E-MTAB-6938/Files/E-MTAB-6938.sdrf.txt
-
+wget https://ftp.ebi.ac.uk/biostudies/fire/E-MTAB-/938/E-MTAB-6938/Files/E-MTAB-6938.sdrf.txt
 ##bash
 
 # --- 4. Extract FASTQ links ---
