@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#SBATCH --job-name=download
+#SBATCH --time=12:00:00
+#SBATCH --mem=4G
+#SBATCH --output=../logs/download_%j.out
+
+# path to the  folder where links2dowload.txt is
+
+cd ../data
+
+#donwload the files
+
+wget -N -i links2download.txt
