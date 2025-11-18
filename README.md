@@ -17,6 +17,7 @@ conda activate copyeEF3
 conda config --add channels bioconda #to use bioinformatic tools
  
 # --- 2. Install required tools ---
+
 conda install wget            #version installed 1.21.4(most recent version) as the old version was not packed for Linux and the main use of it is to download files , in the paper they used 1.18 . ##the instruction provided by the paper were only for mac user
 conda install cutadapt=1.15 
 conda install samtools=1.5 
@@ -29,6 +30,7 @@ conda install pysam=0.11.2.2
 
 # --- 3. Download SDRF file ( Ribo-Seq and RNA-Seq sequencing data from ArrayExpress database at EMBL-EBI accession number E-MTAB-6938)---
 wget https://ftp.ebi.ac.uk/biostudies/fire/E-MTAB-/938/E-MTAB-6938/Files/E-MTAB-6938.sdrf.txt
+
 ##bash
 
 # --- 4. Extract FASTQ links ---
@@ -36,4 +38,7 @@ cat E-MTAB-5515.sdrf.txt | cut -f34 | tail -n +2 > links2download.txt
 
 # --- 5. Download FASTQ files ( done via sbatch job) ---
 downloadFasqfiles.slum #that is the script use to downloas the files.
+
+#Downloading the reference genome
+ S. cerevisiae reference genome R64-1-1
 

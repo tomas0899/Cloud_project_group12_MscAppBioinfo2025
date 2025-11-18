@@ -9,6 +9,10 @@
 
 cd ../data
 
-#donwload the files
+#donwload fastq files the from E folder
 
-wget -N -i links2download.txt
+#wget -N -i links2download.txt
+
+#Downloading the reference genome for S.C
+
+wget http://sgd-archive.yeastgenome.org/sequence/S288C_reference/genome_releases/S288C_reference_genome_R64-1-1_20110203.tgz
