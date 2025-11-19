@@ -12,19 +12,19 @@ To ensure reproducibility, all analyses are executed in a dedicated conda enviro
 # --------------------------------------------
 
 # --- 1. Create conda environment ---
-conda create --name copyeEF3 python=3.5 
-conda activate copyeEF3
-conda config --add channels bioconda #to use bioinformatic tools
+- conda create --name copyeEF3 python=3.5 
+- conda activate copyeEF3
+- conda config --add channels bioconda #to use bioinformatic tools
  
 # --- 2. Install required tools ---
 
-conda install wget            #version installed 1.21.4(most recent version) as the old version was not packed for Linux and the main use of it is to download files , in the paper they used 1.18 . ##the instruction provided by the paper were only for mac user
-conda install cutadapt=1.15 
-conda install samtools=1.5 
-conda install hisat2=2.2.1 
-conda install bowtie2          #version installed 2.5.4(newest) there was not specification on the vesion
-conda install fastqc           #version installed 0.12.1(newest) there was not specification on the vesion
-conda install pysam=0.11.2.2 
+- conda install wget            #version installed 1.21.4(most recent version) as the old version was not packed for Linux and the main use of it is to download files , in the paper they used 1.18 . ##the instruction provided by the paper were only for mac user
+- conda install cutadapt=1.15 
+- conda install samtools=1.5 
+- conda install hisat2=2.2.1 
+- conda install bowtie2          #version installed 2.5.4(newest) there was not specification on the vesion
+- conda install fastqc           #version installed 0.12.1(newest) there was not specification on the vesion
+- conda install pysam=0.11.2.2 
 
 ##bash
 
@@ -39,6 +39,6 @@ cat E-MTAB-5515.sdrf.txt | cut -f34 | tail -n +2 > links2download.txt
 # --- 5. Download FASTQ files ( done via sbatch job) ---
 downloadFasqfiles.slum #that is the script use to downloas the files.
 
-#Downloading the reference genome
+# Downloading the reference genome
  S. cerevisiae reference genome R64-1-1
 
