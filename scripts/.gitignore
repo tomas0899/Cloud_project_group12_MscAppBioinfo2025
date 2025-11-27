@@ -1,0 +1,12 @@
+gitignore
+
+#raw FASTQ files
+data/raw/
+data/genomeref/
+data/*.tgz
+
+#FastQC results
+results/
+
+#logs and termporary files
+logs/

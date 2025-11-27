@@ -1,0 +1,25 @@
+#!/bin/bash
+
+#SBATCH --job-name=conda_test
+#SBATCH --output=../logs/conda_test_%j.out
+#SBATCH --error=../logs/conda_test_%j.err
+#SBATCH --time=06:00:00
+#SBATCH --nodes=1
+#SBATCH --mem=2G
+
+#Loading module used when during environment creation
+module load anaconda3/2022.10-gcc-13.2.0
+
+#Initializing conda for the shell
+eval "$(conda shell.bash hook)"
+
+#Activating environment
+conda activate copyeEF3
+
+#Testing that python work
+python --version
+
+#Testing that conda packages work
+conda list
+
+
